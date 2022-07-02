@@ -1,7 +1,7 @@
 public class e1 {
 
     public static void main(String[] args){
-        int res = elevar(2,10);
+        int res = elevar1(2,10);
         System.out.println(res);
     }
 
@@ -13,6 +13,14 @@ public class e1 {
             return elevar(a,b,res*a,cont+1);
         }else{
             return res;
+        }
+
+    }
+    public static int elevar1(int a,int b){
+        if(b != 0){
+            return a*elevar1(a,b-1);
+        }else{
+            return 1;
         }
     }
 }
